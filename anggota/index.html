@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#F4FAFF">
+  <meta name="description" content="Welcome to BEM POLINEF - Pengumuman Seleksi & Onboarding Anggota Baru Periode 2026-2027">
+  <title>BEM POLINEF - Pengumuman & Anggota Baru 2026–2027</title>
+
+  <!-- Dynamic Base Resolution untuk Clean URL (Hanya aktif saat direct access /anggota atau /welcome) -->
+  <script>
+    (function() {
+      try {
+        var p = window.location.pathname;
+        if (p.includes('/anggota') || p.includes('/welcome')) {
+          var base = document.createElement('base');
+          var root = p.replace(/\/(anggota|welcome).*$/, '') || '/';
+          if (!root.endsWith('/')) root += '/';
+          base.href = root;
+          document.head.appendChild(base);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Font: Plus Jakarta Sans for Playful Modern Mobile Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HALAMAN 1: OPENING / SPLASH SCREEN -->
+  <div id="splash-screen" class="splash-screen" role="status" aria-label="Layar Pembuka BEM POLINEF">
+    <div class="splash-content">
+      <div class="splash-glow"></div>
+      <div class="splash-logo-container">
+        <img src="assets/logo-bem.png" alt="Logo Resmi BEM POLINEF" class="splash-logo">
+      </div>
+      <div class="splash-text-container">
+        <span class="splash-brand-text">BEM POLINEF</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTAINER UTAMA APLIKASI MOBILE -->
+  <main id="app-container" class="app-container">
+
+    <!-- HALAMAN 2: PRANK ANNOUNCEMENT & SUCCESS REVEAL SCREEN (FULL-VIEWPORT ONBOARDING REDESIGN) -->
+    <div id="prank-screen" class="prank-screen" aria-label="Pengumuman Hasil Seleksi">
+      
+      <!-- Backdrop Curve for Organic Depth -->
+      <div class="prank-backdrop-curve" aria-hidden="true"></div>
+
+      <!-- Canvas Confetti untuk Animasi Plot Twist (Full Screen) -->
+      <canvas id="confetti-canvas" class="confetti-canvas"></canvas>
+
+      <!-- ================================================================== -->
+      <!-- VIEW 1: FAKE REJECTION ONBOARDING (PENGUMUMAN PALSU AWAL)          -->
+      <!-- ================================================================== -->
+      <div class="prank-view-wrap prank-view-rejection" id="prank-rejection-body">
+        
+        <!-- A. TOP HEADER & IDENTITAS ORGANISASI -->
+        <header class="prank-top-area">
+          <div class="brand-identity-pill">
+            <img src="assets/logo-bem.png" alt="Logo BEM POLINEF" class="brand-mini-logo">
+            <span class="brand-pill-text">BEM POLITEKNIK NEGERI FAKFAK</span>
+          </div>
+          <div class="prank-capsule-tag">
+            <span>HASIL SELEKSI ANGGOTA BARU 2026–2027</span>
+          </div>
+        </header>
+
+        <!-- B. HERO VISUAL: 3D REJECTION DOCUMENT DENGAN FLOATING ELEMENTS -->
+        <section class="prank-hero-stage" aria-label="Ilustrasi Pengumuman Hasil Seleksi">
+          
+          <!-- Floating 3D Geometric Decorations -->
+          <!-- 1. Lavender Torus / Donut (Top Right) -->
+          <div class="floating-deco deco-torus-tr" aria-hidden="true">
+            <svg width="42" height="42" viewBox="0 0 48 48" fill="none">
+              <ellipse cx="24" cy="24" rx="20" ry="20" fill="url(#pTorus)" stroke="rgba(255,255,255,0.7)" stroke-width="2.5"/>
+              <ellipse cx="24" cy="24" rx="8" ry="8" fill="#E2ECF8"/>
+              <defs>
+                <linearGradient id="pTorus" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E9D5FF"/>
+                  <stop offset="0.5" stop-color="#C084FC"/>
+                  <stop offset="1" stop-color="#A855F7"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 2. Coral Glossy Sphere (Left Middle) -->
+          <div class="floating-deco deco-sphere-ml" aria-hidden="true">
+            <div class="glossy-sphere sphere-coral"></div>
+          </div>
+
+          <!-- 3. Mint Triangle (Bottom Left) -->
+          <div class="floating-deco deco-triangle-bl" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <path d="M18 4L33 30C33.5 31 32.5 32 31.5 32H4.5C3.5 32 2.5 31 3 30L18 4Z" fill="url(#pMint)"/>
+              <defs>
+                <linearGradient id="pMint" x1="4" y1="4" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#A7F3D0"/>
+                  <stop offset="1" stop-color="#34D399"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 4. Golden Sparkle (Right Middle) -->
+          <div class="floating-deco deco-sparkle-mr" aria-hidden="true">✦</div>
+
+          <!-- 5. Diamond (Top Left) -->
+          <div class="floating-deco deco-diamond-tl" aria-hidden="true">
+            <div class="shape-diamond diamond-lavender"></div>
+          </div>
+
+          <!-- HERO 3D DOCUMENT STAGE -->
+          <div class="hero-stage-center">
+            <!-- Multi-layered Soft Alert Aura -->
+            <div class="hero-aura-outer aura-rejection-outer"></div>
+            <div class="hero-aura-inner aura-rejection-inner"></div>
+
+            <!-- Elevated Circular Tinted Backdrop -->
+            <div class="hero-illustration-plate">
+              <!-- 3D Document Illustration (Custom SVG) -->
+              <svg width="124" height="142" viewBox="0 0 124 142" fill="none" class="doc-3d-svg">
+                <!-- Base Document Shadow -->
+                <rect x="10" y="12" width="104" height="126" rx="18" fill="rgba(38, 52, 92, 0.08)"/>
+                
+                <!-- Main Document Body -->
+                <rect x="12" y="8" width="100" height="124" rx="16" fill="url(#docGrad)" stroke="#FFFFFF" stroke-width="2.5"/>
+                
+                <!-- Folded Corner Effect -->
+                <path d="M88 8L112 32H96C91.5 32 88 28.5 88 24V8Z" fill="#E2E8F0"/>
+                <path d="M88 8L112 32H88V8Z" fill="url(#foldGrad)"/>
+
+                <!-- Header Lines on Document -->
+                <rect x="26" y="24" width="46" height="5" rx="2.5" fill="#CBD5E1"/>
+                <rect x="26" y="35" width="34" height="4" rx="2" fill="#E2E8F0"/>
+                
+                <!-- Embossed Text Placeholders -->
+                <rect x="26" y="52" width="72" height="4" rx="2" fill="#E2E8F0"/>
+                <rect x="26" y="62" width="60" height="4" rx="2" fill="#E2E8F0"/>
+                <rect x="26" y="72" width="68" height="4" rx="2" fill="#E2E8F0"/>
+
+                <!-- 3D Wax Seal with Rejection Cross -->
+                <g filter="url(#sealShadow)">
+                  <circle cx="62" cy="100" r="22" fill="url(#sealGrad)"/>
+                  <circle cx="62" cy="100" r="19" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                  <!-- White Cross (X) -->
+                  <path d="M54 92L70 108" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M70 92L54 108" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+                </g>
+
+                <defs>
+                  <linearGradient id="docGrad" x1="12" y1="8" x2="112" y2="132" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FFFFFF"/>
+                    <stop offset="0.8" stop-color="#F8FAFC"/>
+                    <stop offset="1" stop-color="#EEF2F6"/>
+                  </linearGradient>
+                  <linearGradient id="foldGrad" x1="88" y1="8" x2="112" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#CBD5E1"/>
+                    <stop offset="1" stop-color="#94A3B8"/>
+                  </linearGradient>
+                  <linearGradient id="sealGrad" x1="40" y1="78" x2="84" y2="122" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#EF4444"/>
+                    <stop offset="0.6" stop-color="#DC2626"/>
+                    <stop offset="1" stop-color="#B91C1C"/>
+                  </linearGradient>
+                  <filter id="sealShadow" x="34" y="74" width="56" height="56" filterUnits="userSpaceOnUse">
+                    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="rgba(220, 38, 38, 0.35)"/>
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- C. BOTTOM CONTENT AREA (LARGE TYPOGRAPHY & LOADING) -->
+        <footer class="prank-bottom-area">
+          <div class="prank-heading-block">
+            <h1 class="rejection-title glitch-target" id="prank-alert-title">MOHON MAAF!</h1>
+            <p class="rejection-status-text">KAMU DINYATAKAN TIDAK LOLOS SELEKSI.</p>
+          </div>
+
+          <p class="rejection-desc">
+            Terima kasih telah mengikuti seluruh tahapan seleksi dan wawancara calon anggota BEM POLINEF. Kami menghargai waktu dan partisipasimu.
+          </p>
+
+          <!-- Loading Indicator -->
+          <div class="prank-loading-wrap" id="prank-loading-wrap">
+            <div class="prank-loading-bar-track">
+              <div class="prank-loading-bar-fill" id="prank-loading-fill"></div>
+            </div>
+            <div class="prank-loading-text">
+              <span class="prank-loading-dot"></span>
+              <span>Memproses hasil pengumuman...</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+      <!-- ================================================================== -->
+      <!-- VIEW 2: SUCCESS REVEAL ONBOARDING (CELEBRATION PLOT TWIST)          -->
+      <!-- ================================================================== -->
+      <div class="prank-view-wrap prank-view-reveal" id="prank-reveal-body" style="display: none;">
+        
+        <!-- A. TOP HEADER & PUNCHLINE -->
+        <header class="prank-top-area">
+          <div class="brand-identity-pill">
+            <img src="assets/logo-bem.png" alt="Logo BEM POLINEF" class="brand-mini-logo">
+            <span class="brand-pill-text">BEM POLITEKNIK NEGERI FAKFAK</span>
+          </div>
+          <div class="reveal-punchline-badge">
+            <span>WKWKWK KENA PRANK! 😂</span>
+          </div>
+        </header>
+
+        <!-- B. HERO VISUAL: LARGE BEM LOGO DENGAN CELEBRATION AURA & DECORATIONS -->
+        <section class="prank-hero-stage" aria-label="Hero Visual Perayaan Kelulusan BEM POLINEF">
+          
+          <!-- Floating 3D Geometric Decorations -->
+          <!-- 1. Golden Swimmer (Top Left) -->
+          <div class="floating-deco deco-fish-tl" aria-hidden="true">
+            <svg width="44" height="26" viewBox="0 0 44 26" fill="none">
+              <path d="M4 13C12 3 28 3 36 13C28 23 12 23 4 13Z" fill="url(#rGoldGrad)"/>
+              <path d="M34 13L42 6V20L34 13Z" fill="url(#rGoldDark)"/>
+              <circle cx="12" cy="11" r="2" fill="#26345C"/>
+              <defs>
+                <linearGradient id="rGoldGrad" x1="4" y1="3" x2="36" y2="23" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFE082"/>
+                  <stop offset="1" stop-color="#FFB326"/>
+                </linearGradient>
+                <linearGradient id="rGoldDark" x1="34" y1="6" x2="42" y2="20" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB326"/>
+                  <stop offset="1" stop-color="#F59E0B"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 2. Lavender Torus / Donut (Right Middle) -->
+          <div class="floating-deco deco-donut-tr" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
+              <ellipse cx="24" cy="24" rx="20" ry="20" fill="url(#rTorus)" stroke="rgba(255,255,255,0.75)" stroke-width="2.5"/>
+              <ellipse cx="24" cy="24" rx="8" ry="8" fill="#FEF9C3"/>
+              <defs>
+                <linearGradient id="rTorus" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E9D5FF"/>
+                  <stop offset="0.5" stop-color="#C084FC"/>
+                  <stop offset="1" stop-color="#A855F7"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 3. Mint Triangle (Bottom Left) -->
+          <div class="floating-deco deco-triangle-bl" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+              <path d="M18 4L33 30C33.5 31 32.5 32 31.5 32H4.5C3.5 32 2.5 31 3 30L18 4Z" fill="url(#rMint)"/>
+              <defs>
+                <linearGradient id="rMint" x1="4" y1="4" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#A7F3D0"/>
+                  <stop offset="1" stop-color="#34D399"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 4. Golden Little Fish (Lower Right) -->
+          <div class="floating-deco deco-fish-br" aria-hidden="true">
+            <svg width="32" height="19" viewBox="0 0 44 26" fill="none">
+              <path d="M4 13C12 3 28 3 36 13C28 23 12 23 4 13Z" fill="url(#rGoldGrad2)"/>
+              <path d="M34 13L42 6V20L34 13Z" fill="url(#rGoldDark2)"/>
+              <circle cx="12" cy="11" r="2" fill="#26345C"/>
+              <defs>
+                <linearGradient id="rGoldGrad2" x1="4" y1="3" x2="36" y2="23" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFE082"/>
+                  <stop offset="1" stop-color="#FFB74D"/>
+                </linearGradient>
+                <linearGradient id="rGoldDark2" x1="34" y1="6" x2="42" y2="20" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFB74D"/>
+                  <stop offset="1" stop-color="#FFA726"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <!-- 5. Glossy Cyan Sphere (Left Middle) -->
+          <div class="floating-deco deco-bubble-ml" aria-hidden="true">
+            <div class="glossy-sphere sphere-blue"></div>
+          </div>
+
+          <!-- 6. Golden Sparkle (Center Right) -->
+          <div class="floating-deco deco-sparkle-mr" aria-hidden="true">✦</div>
+
+          <!-- HERO LOGO STAGE (LARGE & DOMINATING) -->
+          <div class="hero-stage-center">
+            <!-- Multi-layered Warm Celebration Aura -->
+            <div class="hero-aura-outer aura-celebration-outer"></div>
+            <div class="hero-aura-inner aura-celebration-inner"></div>
+
+            <!-- Elevated Circular White Plate for Logo -->
+            <div class="hero-logo-plate hero-plate-celebration">
+              <img src="assets/logo-bem.png" alt="Logo Resmi BEM POLINEF" class="hero-logo-image">
+            </div>
+          </div>
+
+        </section>
+
+        <!-- C. BOTTOM CONTENT AREA (CELEBRATION HEADLINE & CTA) -->
+        <footer class="prank-bottom-area">
+          <div class="prank-heading-block">
+            <h1 class="reveal-headline">
+              SELAMAT! <span class="text-accent-green">KAMU LOLOS!</span>
+            </h1>
+            <p class="reveal-success-message">
+              KAMU RESMI MENJADI BAGIAN DARI KELUARGA BESAR BEM POLINEF PERIODE 2026–2027!
+            </p>
+          </div>
+
+          <p class="reveal-desc">
+            Perjalanan baru dimulai! Bersiaplah untuk belajar, berkembang, berkolaborasi, dan memberikan kontribusi terbaik bersama BEM POLINEF.
+          </p>
+
+          <div class="reveal-cta-wrap">
+            <button id="btn-continue-welcome" class="btn-cta-golden btn-continue-main" type="button">
+              <span>LANJUTKAN →</span>
+            </button>
+          </div>
+        </footer>
+
+      </div>
+
+    </div>
+
+    <!-- HALAMAN 3: WELCOME SCREEN (PLAYFUL ONBOARDING LAYOUT) -->
+    <div id="welcome-screen" class="onboarding-screen">
+
+      <!-- Organic Rounded Pastel Backdrop Curve (Inspired by Reference) -->
+      <div class="backdrop-curve" aria-hidden="true"></div>
+
+      <!-- AREA ATAS — HEADING -->
+      <header class="heading-area">
+        <h1 class="onboarding-title">Are You Ready?</h1>
+        <p class="onboarding-desc">
+          Perjalanan baru dimulai. Selamat datang di keluarga besar BEM POLINEF. Mari tumbuh, bergerak, dan memberikan kontribusi bersama.
+        </p>
+      </header>
+
+      <!-- AREA TENGAH — HERO VISUAL -->
+      <section class="hero-visual-area" aria-label="Hero Visual BEM POLINEF">
+        
+        <!-- Floating 3D-styled Decorative Elements -->
+        <!-- 1. Golden Fish / Swimmer (Top Left) -->
+        <div class="floating-deco deco-fish-tl" aria-hidden="true">
+          <svg width="44" height="26" viewBox="0 0 44 26" fill="none">
+            <path d="M4 13C12 3 28 3 36 13C28 23 12 23 4 13Z" fill="url(#goldGrad)"/>
+            <path d="M34 13L42 6V20L34 13Z" fill="url(#goldGradDark)"/>
+            <circle cx="12" cy="11" r="2" fill="#26345C"/>
+            <defs>
+              <linearGradient id="goldGrad" x1="4" y1="3" x2="36" y2="23" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFE082"/>
+                <stop offset="1" stop-color="#FFB326"/>
+              </linearGradient>
+              <linearGradient id="goldGradDark" x1="34" y1="6" x2="42" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFB326"/>
+                <stop offset="1" stop-color="#F59E0B"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- 2. Lavender 3D Torus / Donut (Right Middle) -->
+        <div class="floating-deco deco-donut-tr" aria-hidden="true">
+          <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+            <ellipse cx="24" cy="24" rx="20" ry="20" fill="url(#lavenderTorus)" stroke="rgba(255,255,255,0.75)" stroke-width="2.5"/>
+            <ellipse cx="24" cy="24" rx="8" ry="8" fill="#D6E6F9"/>
+            <defs>
+              <linearGradient id="lavenderTorus" x1="8" y1="8" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E9D5FF"/>
+                <stop offset="0.45" stop-color="#C084FC"/>
+                <stop offset="1" stop-color="#A855F7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- 3. Mint / Cyan Triangle (Bottom Left) -->
+        <div class="floating-deco deco-triangle-bl" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
+            <path d="M18 4L33 30C33.5 31 32.5 32 31.5 32H4.5C3.5 32 2.5 31 3 30L18 4Z" fill="url(#mintGrad)"/>
+            <defs>
+              <linearGradient id="mintGrad" x1="4" y1="4" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A7F3D0"/>
+                <stop offset="1" stop-color="#34D399"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- 4. Golden Little Fish (Lower Right) -->
+        <div class="floating-deco deco-fish-br" aria-hidden="true">
+          <svg width="32" height="19" viewBox="0 0 44 26" fill="none">
+            <path d="M4 13C12 3 28 3 36 13C28 23 12 23 4 13Z" fill="url(#goldGrad2)"/>
+            <path d="M34 13L42 6V20L34 13Z" fill="url(#goldGradDark2)"/>
+            <circle cx="12" cy="11" r="2" fill="#26345C"/>
+            <defs>
+              <linearGradient id="goldGrad2" x1="4" y1="3" x2="36" y2="23" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFE082"/>
+                <stop offset="1" stop-color="#FFB74D"/>
+              </linearGradient>
+              <linearGradient id="goldGradDark2" x1="34" y1="6" x2="42" y2="20" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FFB74D"/>
+                <stop offset="1" stop-color="#FFA726"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- 5. Soft 3D Glossy Sphere (Left Middle) -->
+        <div class="floating-deco deco-bubble-ml" aria-hidden="true">
+          <div class="glossy-sphere sphere-blue"></div>
+        </div>
+
+        <!-- 6. Pastel Diamond / Confetti (Top Right) -->
+        <div class="floating-deco deco-diamond-tr" aria-hidden="true">
+          <div class="shape-diamond"></div>
+        </div>
+
+        <!-- 7. Pastel Ring / Circle (Bottom Center-Right) -->
+        <div class="floating-deco deco-ring-br" aria-hidden="true">
+          <div class="shape-ring"></div>
+        </div>
+
+        <!-- 8. Soft Mini Sparkle (Center Right) -->
+        <div class="floating-deco deco-sparkle-mr" aria-hidden="true">✦</div>
+
+        <!-- HERO LOGO CONTAINER (Large, dominating center like the character in reference) -->
+        <div class="hero-logo-stage">
+          <!-- Multi-layered Soft Aura -->
+          <div class="hero-aura-outer"></div>
+          <div class="hero-aura-inner"></div>
+          
+          <!-- Elevated White Circular Plate for crisp logo contrast -->
+          <div class="hero-logo-plate">
+            <img src="assets/logo-bem.png" alt="Logo Resmi BEM POLINEF" class="hero-logo-image">
+          </div>
+        </div>
+
+      </section>
+
+      <!-- AREA BAWAH — CALL TO ACTION -->
+      <footer class="cta-area">
+        <button id="btn-view-members" class="btn-cta-golden" type="button">
+          <span>Lihat Daftar Anggota →</span>
+        </button>
+      </footer>
+
+    </div>
+
+    <!-- HALAMAN 4: MEMBER LIST SCREEN (DAFTAR ANGGOTA BARU 2026-2027) -->
+    <div id="member-screen" class="member-screen" aria-label="Daftar Anggota Baru BEM POLINEF">
+      
+      <!-- A. HEADER STICKY -->
+      <header class="member-header">
+        <button id="btn-back" class="btn-back" type="button" aria-label="Kembali ke Halaman Welcome">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5"></path>
+            <path d="m12 19-7-7 7-7"></path>
+          </svg>
+        </button>
+        <div class="header-brand-center">
+          <img src="assets/logo-bem.png" alt="Logo BEM POLINEF" class="header-mini-logo">
+          <div class="header-title-wrap">
+            <h2 class="header-title">Anggota Baru</h2>
+            <span class="header-subtitle">BEM POLINEF Periode 2026–2027</span>
+          </div>
+        </div>
+        <div class="header-spacer" aria-hidden="true"></div>
+      </header>
+
+      <!-- KONTEN SCROLLABLE DAFTAR ANGGOTA -->
+      <div class="member-scroll-body">
+        
+        <!-- B. INFORMASI JUMLAH ANGGOTA (ROUNDED PASTEL CARD) -->
+        <section class="member-info-card">
+          <div class="info-card-top">
+            <span class="info-period-pill">PERIODE 2026–2027</span>
+            <span class="info-count-chip" id="members-count-badge">40 Anggota Baru</span>
+          </div>
+          <h1 class="info-main-title">DAFTAR ANGGOTA BARU</h1>
+          <p class="info-sub-title">Kementerian BEM POLINEF Periode 2026–2027</p>
+        </section>
+
+        <!-- C. FITUR PENCARIAN MAKSIMAL -->
+        <section class="search-section">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+            <input 
+              type="search" 
+              id="input-search" 
+              class="search-input" 
+              placeholder="Cari nama anggota..." 
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="none"
+              spellcheck="false"
+              enterkeyhint="search"
+              inputmode="search"
+              aria-label="Cari nama anggota"
+            >
+            <button type="button" id="btn-clear-search" class="btn-clear-search" aria-label="Hapus kata kunci pencarian">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- D. FILTER KEMENTERIAN (HORIZONTAL SCROLLABLE CHIPS) -->
+        <section class="filter-section">
+          <div class="filter-scroll-track" id="biro-filters" role="tablist" aria-label="Filter Kementerian Anggota">
+            <button type="button" class="filter-chip active" data-biro="ALL" data-kementerian="ALL" role="tab" aria-selected="true">Semua Kementerian</button>
+            <button type="button" class="filter-chip" data-biro="ADKESMA" data-kementerian="ADKESMA" role="tab" aria-selected="false">ADKESMA</button>
+            <button type="button" class="filter-chip" data-biro="RINBANG" data-kementerian="RINBANG" role="tab" aria-selected="false">RINBANG</button>
+            <button type="button" class="filter-chip" data-biro="PSDM" data-kementerian="PSDM" role="tab" aria-selected="false">PSDM</button>
+            <button type="button" class="filter-chip" data-biro="MINBAK" data-kementerian="MINBAK" role="tab" aria-selected="false">MINBAK</button>
+            <button type="button" class="filter-chip" data-biro="LINGDUP" data-kementerian="LINGDUP" role="tab" aria-selected="false">LINGDUP</button>
+            <button type="button" class="filter-chip" data-biro="KWU" data-kementerian="KWU" role="tab" aria-selected="false">KWU</button>
+            <button type="button" class="filter-chip" data-biro="HUMKOM" data-kementerian="HUMKOM" role="tab" aria-selected="false">HUMKOM</button>
+            <button type="button" class="filter-chip" data-biro="KEAG" data-kementerian="KEAG" role="tab" aria-selected="false">KEAG</button>
+            <button type="button" class="filter-chip" data-biro="KESPER" data-kementerian="KESPER" role="tab" aria-selected="false">KESPER</button>
+            <button type="button" class="filter-chip" data-biro="SOSPOL-AP" data-kementerian="SOSPOL-AP" role="tab" aria-selected="false">SOSPOL-AP</button>
+          </div>
+        </section>
+
+        <!-- E. DAFTAR NAMA ANGGOTA (VERTICAL LIST CARDS) -->
+        <section class="members-list-wrapper">
+          <div class="list-meta-info" id="list-meta-info">
+            <span>Menampilkan <strong id="visible-count">40</strong> dari 40 anggota</span>
+          </div>
+
+          <div id="members-list" class="members-list" role="list">
+            <!-- Data kartu anggota dirender secara dinamis melalui script.js -->
+          </div>
+
+          <!-- PESAN JIKA DATA TIDAK DITEMUKAN -->
+          <div id="empty-state" class="empty-state" style="display: none;">
+            <div class="empty-icon-wrapper">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#56698F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+                <path d="M8 11h6"></path>
+              </svg>
+            </div>
+            <h3 class="empty-title" id="empty-title">Nama anggota tidak ditemukan.</h3>
+            <p class="empty-desc" id="empty-desc">Coba periksa ejaan nama atau pilih filter kementerian lainnya.</p>
+            <button type="button" id="btn-reset-filter" class="btn-reset-filter">Reset Pencarian</button>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Modern Non-intrusive Toast Notification -->
+  <div id="toast-notification" class="toast-notification" role="alert" aria-live="polite">
+    <div class="toast-content">
+      <span class="toast-icon">✨</span>
+      <span id="toast-message" class="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

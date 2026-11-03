@@ -1,0 +1,15 @@
+# Temporary & Scratch Files
+scratch/
+.system_generated/
+*.tmp
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+
